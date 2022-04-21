@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yura Len</title>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="./CSS/styles.css">
 </head>
@@ -518,28 +519,33 @@
                     <div class="srv-card">
                         <div class="card-desc">
                             <h3>Brand Identity</h3>
-                            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, praesentium totam iure voluptas libero dolorum inventore officiis quos error impedit!</p>
+                            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, praesentium
+                                totam iure voluptas libero dolorum inventore officiis quos error impedit!</p>
                         </div>
                         <a href="#" class="btn secondary-btn">Explore More</a>
                     </div>
                     <div class="srv-card">
                         <div class="card-desc">
                             <h3>Product Design</h3>
-                            <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor consequuntur labore laborum esse dicta qui delectus a sed amet inventore.</p>
+                            <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor consequuntur
+                                labore laborum esse dicta qui delectus a sed amet inventore.</p>
                         </div>
                         <a href="#" class="btn secondary-btn">Explore More</a>
                     </div>
                     <div class="srv-card">
                         <div class="card-desc">
                             <h3>App Design</h3>
-                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, necessitatibus voluptate quaerat ipsum rem dignissimos labore laborum aperiam sed ab?</p>
+                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni,
+                                necessitatibus voluptate quaerat ipsum rem dignissimos labore laborum aperiam sed ab?
+                            </p>
                         </div>
                         <a href="#" class="btn secondary-btn">Explore More</a>
                     </div>
                     <div class="srv-card">
                         <div class="card-desc">
                             <h3>Brand Identity</h3>
-                            <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In aliquid, quis delectus incidunt reprehenderit sed ea praesentium recusandae voluptas dignissimos.</p>
+                            <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In aliquid, quis
+                                delectus incidunt reprehenderit sed ea praesentium recusandae voluptas dignissimos.</p>
                         </div>
                         <a href="#" class="btn secondary-btn">Explore More</a>
                     </div>
@@ -549,6 +555,25 @@
         </section>
 
         <section class="portfolio section">
+            <div class="modal">
+                <div class="modal-overlay"></div>
+                <div class="slider-wrap">
+                    <div class="prev-btn navigation">
+                        <i class="uil uil-angle-left-b"></i>
+                    </div>
+                    <div class="images">
+                        <img class="showImage" src="pictures/movie-search.png">
+                        <img src="pictures/counter-brth.png">
+                        <img src="pictures/OJJO.png">
+                        <img src="pictures/Знімок+екрана+2022-02-21+154252.png">
+                        <img src="pictures/todo-list.png">
+                        <img src="pictures/movie-search.png">
+                    </div>
+                    <div class="next-btn navigation">
+                        <i class="uil uil-angle-right-b"></i>
+                    </div>
+                </div>
+            </div>
             <div class="container">
                 <div class="portfolio-header">
                     <div class="portfolio-title">
@@ -556,18 +581,18 @@
                         <h1 class="heading">Latest Projects</h1>
                     </div>
                     <div class="filter-btns">
-                        <button class="filter-btn">All</button>
-                        <button class="filter-btn">Product</button>
-                        <button class="filter-btn">Interacting</button>
-                        <button class="filter-btn">Web App</button>
+                        <button class="filter-btn" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter=".product">Product</button>
+                        <button class="filter-btn" data-filter=".inter">Interacting</button>
+                        <button class="filter-btn" data-filter=".web">Web App</button>
                     </div>
                 </div>
                 <div class="portfolio-gallery">
-                    <div class="prt-card">
+                    <div class="mix prt-card inter">
                         <div class="prt-image">
                             <img src="./pictures/movie-search.png" style="height: 200px;" alt="movie-search">
                             <div class="prt-overlay">
-                                <span class="prt-icon" style="--i: 0s">
+                                <span class="prt-icon zoom-icon" style="--i: 0s">
                                     <i class="uil uil-search-plus"></i>
                                 </span>
                                 <a href="#" class="prt-icon" style="--i: .15s">
@@ -580,11 +605,11 @@
                             <a href="#" class="btn secondary-btn sm">Read more</a>
                         </div>
                     </div>
-                    <div class="prt-card">
+                    <div class="mix prt-card product">
                         <div class="prt-image">
                             <img src="./pictures/counter-brth.png" style="height: 200px;" alt="counter-birthday">
                             <div class="prt-overlay">
-                                <span class="prt-icon" style="--i: 0s">
+                                <span class="prt-icon zoom-icon" style="--i: 0s">
                                     <i class="uil uil-search-plus"></i>
                                 </span>
                                 <a href="#" class="prt-icon" style="--i: .15s">
@@ -597,11 +622,11 @@
                             <a href="#" class="btn secondary-btn sm">Read more</a>
                         </div>
                     </div>
-                    <div class="prt-card">
+                    <div class="mix prt-card web">
                         <div class="prt-image">
                             <img src="./pictures/OJJO.png" style="height: 200px;" alt="OJJO Shop">
                             <div class="prt-overlay">
-                                <span class="prt-icon" style="--i: 0s">
+                                <span class="prt-icon zoom-icon" style="--i: 0s">
                                     <i class="uil uil-search-plus"></i>
                                 </span>
                                 <a href="#" class="prt-icon" style="--i: .15s">
@@ -614,11 +639,12 @@
                             <a href="#" class="btn secondary-btn sm">Read more</a>
                         </div>
                     </div>
-                    <div class="prt-card">
+                    <div class="mix prt-card product">
                         <div class="prt-image">
-                            <img src="./pictures/Знімок+екрана+2022-02-21+154252.png" style="height: 200px;" alt="stopwatch">
+                            <img src="./pictures/Знімок+екрана+2022-02-21+154252.png" style="height: 200px;"
+                                alt="stopwatch">
                             <div class="prt-overlay">
-                                <span class="prt-icon" style="--i: 0s">
+                                <span class="prt-icon zoom-icon" style="--i: 0s">
                                     <i class="uil uil-search-plus"></i>
                                 </span>
                                 <a href="#" class="prt-icon" style="--i: .15s">
@@ -631,11 +657,11 @@
                             <a href="#" class="btn secondary-btn sm">Read more</a>
                         </div>
                     </div>
-                    <div class="prt-card">
+                    <div class="mix prt-card inter">
                         <div class="prt-image">
-                            <img src="./pictures/todo-list.png" style="height: 200px;" alt="todo-list"> 
+                            <img src="./pictures/todo-list.png" style="height: 200px;" alt="todo-list">
                             <div class="prt-overlay">
-                                <span class="prt-icon" style="--i: 0s">
+                                <span class="prt-icon zoom-icon" style="--i: 0s">
                                     <i class="uil uil-search-plus"></i>
                                 </span>
                                 <a href="#" class="prt-icon" style="--i: .15s">
@@ -648,11 +674,11 @@
                             <a href="#" class="btn secondary-btn sm">Read more</a>
                         </div>
                     </div>
-                    <div class="prt-card">
+                    <div class="mix prt-card web">
                         <div class="prt-image">
                             <img src="./pictures/movie-search.png" style="height: 200px;" alt="movie-search">
                             <div class="prt-overlay">
-                                <span class="prt-icon" style="--i: 0s">
+                                <span class="prt-icon zoom-icon" style="--i: 0s">
                                     <i class="uil uil-search-plus"></i>
                                 </span>
                                 <a href="#" class="prt-icon" style="--i: .15s">
@@ -668,8 +694,63 @@
                 </div>
             </div>
         </section>
-    </main>
 
+        <section class="testimonials section">
+            <div class="container">
+                <div class="section-background">
+                    <img src="./pictures/square1.png" class="square" alt="square">
+                    <img src="./pictures/circle2.png" class="circle" alt="circle">
+                </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="client">
+                                <img src="./pictures/testi1.png" alt="person1">
+                                <div class="client-info">
+                                    <h4>Kelly Williams</h4>
+                                    <h5>Executive Officer <a href="#">@ABEnergy</a></h5>
+                                </div>
+                            </div>
+                            <q class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta voluptas a quae
+                                fugiat iusto perspiciatis perferendis quis facere. Asperiores fuga ab id distinctio cum
+                                quaerat minima facere consectetur iste voluptatibus!</q>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="client">
+                                <img src="./pictures/testi2.png" alt="person1">
+                                <div class="client-info">
+                                    <h4>Witold Gislenus</h4>
+                                    <h5>SEO of <a href="#">@eco-focus</a></h5>
+                                </div>
+                            </div>
+                            <q class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque explicabo aliquid
+                                officia aspernatur dolore magni blanditiis debitis unde animi nihil voluptatibus architecto
+                                sint magnam cum ipsa optio, eos laboriosam nobis?</q>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="client">
+                                <img src="./pictures/testi3.png" alt="person1">
+                                <div class="client-info">
+                                    <h4>Adam Winston</h4>
+                                    <h5>Soft Engineer <a href="#">@SoftServe</a></h5>
+                                </div>
+                            </div>
+                            <q class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, quos at!
+                                Ratione maiores rerum, quibusdam facere esse dignissimos veritatis fuga aspernatur, illum,
+                                nesciunt eligendi odit reprehenderit minus illo nostrum labore!</q>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="testimonials-title">
+                    <h3 class="sub-heading">Testimonials</h3>
+                    <h1 class="heading">Hear from my happy clients</h1>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./JavaScript/mixitup.min.js"></script>
     <script src="./JavaScript/index.js"></script>
 </body>
 
