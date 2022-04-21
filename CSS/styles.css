@@ -17,6 +17,7 @@
     --heading-color: hsl(var(--hue-1), 61%, 25%);
     --text-color: hsl(var(--hue-1), 17%, 63%);
     --section-padding: 7rem
+    
 }
 
 /* -- General Styles --*/
@@ -31,6 +32,7 @@ body{
     overflow-x: hidden;
     background-color: var(--bg-color);
     font-family: "Poppins", sans-serif;
+    outline-color: var(--bg-color-3);
 }
 
 body.stopScrolling{
@@ -118,6 +120,36 @@ ul{
 .triangle{
     width: 95px;
     opacity: .2;
+}
+
+.form-input{
+    display: inline-block;
+    padding: .9rem 1.5rem;
+    background: var(--bg-color-3);
+    border: 2px solid var(--bg-color-3);
+    width: 100%;
+    border-radius: 17px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--heading-color);
+    margin-bottom: 1.5rem;
+    outline-color: hsl(257deg 100% 63%);
+    transition: .3s;
+}
+
+.form-input::placeholder{
+    color: var(--text-color);
+}
+
+.form-input:hover{
+    filter: brightness(97%);
+}
+
+.form-input:valid, .form-input:focus{
+    filter: brightness(100%);
+    background: var(--bg-color-1);
+    border-color: var(--main-color-1);
 }
 
 /* ---- Navbar ---- */
@@ -263,10 +295,14 @@ nav.container{
     color: #fff;
     min-width: 125px;
     text-align: center;
+    border: none;
+    outline: none;
+    font-family: inherit;
     font-size: 0.85rem;
     letter-spacing: 0.4px;
     text-transform: capitalize;  
     transition: .3s;
+    cursor: pointer;
 }
 
 .btn:hover{
@@ -975,5 +1011,100 @@ nav.container{
     position: absolute;
     left: 70%;
     top: 15%;
+    transform: translate(-50%, -50%);
+}
+
+/* ------- Contact Section ------- */
+
+.contact .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+}
+
+.mail{
+    color: var(--main-color-1);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.mail i{
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-left: 2px;
+    transform: translateY(3px);
+    transition: .3s margin-left;
+}
+
+.mail:hover{
+    color: var(--main-color-dark-1);
+}
+
+.mail:hover i{
+    margin-left: 10px;
+}
+
+.contact-form{
+    background-color: var(--bg-color-2);
+    border-radius: 20px;
+    padding: 3.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form h3{
+    color: var(--heading-color);
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 1.6rem;
+    line-height: 0.9;
+}
+
+.form-input{
+    display: inline-block;
+    padding: .9rem 1.5rem;
+    background: var(--bg-color-3);
+    border: 2px solid var(--bg-color-3);
+    width: 100%;
+    border-radius: 17px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--heading-color);
+    margin-bottom: 1.5rem;
+    outline-color: hsl(257deg 100% 63%);
+    transition: .3s;
+}
+
+.form-input::placeholder{
+    color: var(--text-color);
+}
+
+.form-input:hover{
+    filter: brightness(97%);
+}
+
+.form-input:valid, .form-input:focus{
+    filter: brightness(100%);
+    background: var(--bg-color-1);
+    border-color: var(--main-color-1);
+}
+
+textarea.form-input{
+    resize: none;
+    min-width: 170px;
+}
+
+.contact .square{
+    position: absolute;
+    left: 25%;
+    bottom: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.contact .triangle{
+    position: absolute;
+    left: 90%;
+    top: 90%;
     transform: translate(-50%, -50%);
 }
