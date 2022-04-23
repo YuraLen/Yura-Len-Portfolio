@@ -28,9 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const copyLink5 = document.querySelector("#copyLink5")
     const copyLink6 = document.querySelector("#copyLink6")
 
-    console.log(i_check);
-    console.log(toggle_btn);
-
 
     // ---------- Sticky Navbar ----------
 
