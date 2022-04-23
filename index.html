@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="./CSS/styles.css">
+
 </head>
 
 <body>
@@ -19,7 +20,7 @@
             <div class="links">
                 <ul>
                     <li>
-                        <a href="#" class="nav-link">Home</a>
+                        <a href="#home" class="nav-link">Home</a>
                     </li>
                     <li>
                         <a href="#about" class="nav-link">About</a>
@@ -39,7 +40,7 @@
         </nav>
     </header>
     <main>
-        <section class="showcase-area" >
+        <section class="showcase-area" id="home">
             <img src="./pictures/square1.png" class="shape square" alt="square">
             <div class="container">
                 <div class="showcase-info">
@@ -315,7 +316,7 @@
                                 </path>
                             </g>
                         </svg>
-                        <h3>User Testing</h3>
+                        <h3>Coding</h3>
                     </div>
                     <div class="about-card">
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -381,7 +382,7 @@
                             </path>
                             <path class="st2" d="M27.63,414.02H498v22.05H27.63V414.02z"></path>
                         </svg>
-                        <h3>Prototyping</h3>
+                        <h3>Creating a layout</h3>
                     </div>
                 </div>
                 <div class="about-info">
@@ -401,7 +402,7 @@
             </div>
         </section>
 
-        <section class="skills section" id="skills">
+        <section class="skills section">
             <div class="container">
                 <div class="skills-box">
                     <div class="box-heading">
@@ -413,7 +414,7 @@
                                 quam quibusdam ex rem? Earum accusantium nemo repudiandae sunt? Sunt cumque maxime fuga
                                 cupiditate, quas animi temporibus a.
                             </p>
-                            <a href="#" class="btn">Hire me</a>
+                            <a href="mailto:yuriilen@ukr.net" class="btn">Hire me</a>
                         </div>
                     </div>
                     <div class="skills-wrap">
@@ -423,21 +424,10 @@
                                     <circle cx="75" cy="75" r="68" />
                                 </svg>
                                 <h2 class="counter">
-                                    <span data-target="77">0</span>
+                                    <span data-target="71">0</span>
                                 </h2>
                             </div>
-                            <div class="sk-title">HTML</div>
-                        </div>
-                        <div class="skill">
-                            <div class="sk-progress">
-                                <svg>
-                                    <circle cx="75" cy="75" r="68" />
-                                </svg>
-                                <h2 class="counter">
-                                    <span data-target="61">0</span>
-                                </h2>
-                            </div>
-                            <div class="sk-title">CSS</div>
+                            <div class="sk-title">HTML & CSS</div>
                         </div>
                         <div class="skill">
                             <div class="sk-progress">
@@ -518,7 +508,7 @@
                 <div class="services-grid">
                     <div class="srv-card">
                         <div class="card-desc">
-                            <h3>Brand Identity</h3>
+                            <h3>Website</h3>
                             <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, praesentium
                                 totam iure voluptas libero dolorum inventore officiis quos error impedit!</p>
                         </div>
@@ -526,7 +516,7 @@
                     </div>
                     <div class="srv-card">
                         <div class="card-desc">
-                            <h3>Product Design</h3>
+                            <h3>Site Design</h3>
                             <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor consequuntur
                                 labore laborum esse dicta qui delectus a sed amet inventore.</p>
                         </div>
@@ -534,7 +524,7 @@
                     </div>
                     <div class="srv-card">
                         <div class="card-desc">
-                            <h3>App Design</h3>
+                            <h3>Web Application</h3>
                             <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni,
                                 necessitatibus voluptate quaerat ipsum rem dignissimos labore laborum aperiam sed ab?
                             </p>
@@ -543,7 +533,7 @@
                     </div>
                     <div class="srv-card">
                         <div class="card-desc">
-                            <h3>Brand Identity</h3>
+                            <h3>Attracting an Audience</h3>
                             <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In aliquid, quis
                                 delectus incidunt reprehenderit sed ea praesentium recusandae voluptas dignissimos.</p>
                         </div>
@@ -584,62 +574,64 @@
                         <button class="filter-btn" data-filter="all">All</button>
                         <button class="filter-btn" data-filter=".product">Product</button>
                         <button class="filter-btn" data-filter=".inter">Interacting</button>
-                        <button class="filter-btn" data-filter=".web">Web App</button>
+                        <button class="filter-btn" data-filter=".app">Web App</button>
                     </div>
                 </div>
                 <div class="portfolio-gallery">
-                    <div class="mix prt-card inter">
+                    <div class="mix prt-card app">
                         <div class="prt-image">
                             <img src="./pictures/movie-search.png" style="height: 200px;" alt="movie-search">
                             <div class="prt-overlay">
                                 <span class="prt-icon zoom-icon" style="--i: 0s">
                                     <i class="uil uil-search-plus"></i>
                                 </span>
-                                <a href="#" class="prt-icon" style="--i: .15s">
-                                    <i class="uil uil-link-h"></i>
+                                <a href="https://9mue5.csb.app/" class="prt-icon" id="copyLink1" style="--i: .15s">
+                                    <i class="uil uil-link-h check"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="prt-desc">
                             <h3>Movie Search (React Native)</h3>
-                            <a href="#" class="btn secondary-btn sm">Read more</a>
+                            <a href="https://9mue5.csb.app/" target="_blank" class="btn secondary-btn sm">Read more</a>
                         </div>
                     </div>
-                    <div class="mix prt-card product">
+                    <div class="mix prt-card inter">
                         <div class="prt-image">
                             <img src="./pictures/counter-brth.png" style="height: 200px;" alt="counter-birthday">
                             <div class="prt-overlay">
                                 <span class="prt-icon zoom-icon" style="--i: 0s">
                                     <i class="uil uil-search-plus"></i>
                                 </span>
-                                <a href="#" class="prt-icon" style="--i: .15s">
-                                    <i class="uil uil-link-h"></i>
+                                <a href="https://yuralen.github.io/counter-time-brth/src/index.html" class="prt-icon"
+                                    id="copyLink2" style="--i: .15s">
+                                    <i class="uil uil-link-h check"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="prt-desc">
                             <h3>Time for the event</h3>
-                            <a href="#" class="btn secondary-btn sm">Read more</a>
+                            <a href="https://yuralen.github.io/counter-time-brth/src/index.html" target="_blank"
+                                class="btn secondary-btn sm">Read more</a>
                         </div>
                     </div>
-                    <div class="mix prt-card web">
+                    <div class="mix prt-card product">
                         <div class="prt-image">
                             <img src="./pictures/OJJO.png" style="height: 200px;" alt="OJJO Shop">
                             <div class="prt-overlay">
                                 <span class="prt-icon zoom-icon" style="--i: 0s">
                                     <i class="uil uil-search-plus"></i>
                                 </span>
-                                <a href="#" class="prt-icon" style="--i: .15s">
-                                    <i class="uil uil-link-h"></i>
+                                <a href="https://tnxhj.csb.app/" class="prt-icon" id="copyLink3" style="--i: .15s">
+                                    <i class="uil uil-link-h check"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="prt-desc">
                             <h3>Coding HTML</h3>
-                            <a href="#" class="btn secondary-btn sm">Read more</a>
+                            <a href="https://tnxhj.csb.app/" target="_blank" class="btn secondary-btn sm">Read more</a>
                         </div>
                     </div>
-                    <div class="mix prt-card product">
+                    <div class="mix prt-card app">
                         <div class="prt-image">
                             <img src="./pictures/Знімок+екрана+2022-02-21+154252.png" style="height: 200px;"
                                 alt="stopwatch">
@@ -647,48 +639,50 @@
                                 <span class="prt-icon zoom-icon" style="--i: 0s">
                                     <i class="uil uil-search-plus"></i>
                                 </span>
-                                <a href="#" class="prt-icon" style="--i: .15s">
+                                <a href="https://yuralen.github.io/stopwatch/src/index.html" class="prt-icon"
+                                    id="copyLink4" style="--i: .15s">
                                     <i class="uil uil-link-h"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="prt-desc">
                             <h3>Stopwatch</h3>
-                            <a href="#" class="btn secondary-btn sm">Read more</a>
+                            <a href="https://yuralen.github.io/stopwatch/src/index.html" target="_blank"
+                                class="btn secondary-btn sm">Read more</a>
                         </div>
                     </div>
-                    <div class="mix prt-card inter">
+                    <div class="mix prt-card app">
                         <div class="prt-image">
                             <img src="./pictures/todo-list.png" style="height: 200px;" alt="todo-list">
                             <div class="prt-overlay">
                                 <span class="prt-icon zoom-icon" style="--i: 0s">
                                     <i class="uil uil-search-plus"></i>
                                 </span>
-                                <a href="#" class="prt-icon" style="--i: .15s">
+                                <a href="https://2jy8u.csb.app/" class="prt-icon" id="copyLink5" style="--i: .15s">
                                     <i class="uil uil-link-h"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="prt-desc">
                             <h3>todo-list (React Redux)</h3>
-                            <a href="#" class="btn secondary-btn sm">Read more</a>
+                            <a href="https://2jy8u.csb.app/" target="_blank" class="btn secondary-btn sm">Read more</a>
                         </div>
                     </div>
-                    <div class="mix prt-card web">
+                    <div class="mix prt-card inter">
                         <div class="prt-image">
                             <img src="./pictures/movie-search.png" style="height: 200px;" alt="movie-search">
                             <div class="prt-overlay">
                                 <span class="prt-icon zoom-icon" style="--i: 0s">
                                     <i class="uil uil-search-plus"></i>
                                 </span>
-                                <a href="#" class="prt-icon" style="--i: .15s">
+                                <a href="https://9mue5.csb.app/" class="prt-icon" id="copyLink6" style="--i: .15s">
                                     <i class="uil uil-link-h"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="prt-desc">
                             <h3>Movie Search</h3>
-                            <a href="#" class="btn secondary-btn sm">Read more</a>
+                            <a href="https://9mue5.csb.app/" target="_blank" class="btn secondary-btn sm">Read more</a>
                         </div>
                     </div>
                 </div>
@@ -763,8 +757,18 @@
                     <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, iure ad! Vero ab ea
                         quam tempora dicta saepe in at placeat, tempore sit animi, quae esse veniam facere deserunt
                         impedit.</p>
-                    <a href="mailto:yuriilen@ukr.net" class="mail">yuriilen@urk.net <i
-                            class="uil uil-arrow-right"></i></a>
+                    <a href="mailto:yuriilen@ukr.net" class="mail"><i class="uil uil-envelope-alt"></i> yuriilen@urk.net
+                        <i class="uil uil-arrow-right"></i>
+                    </a>
+                    <a href="https://t.me/y_olegovich7" target="_blank" class="mail"><i class="uil uil-telegram"></i> y_olegovich7 
+                        <i class="uil uil-arrow-right"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yurii-len/" target="_blank" class="mail"><i class="uil uil-linkedin"></i> Yurii Len 
+                        <i class="uil uil-arrow-right"></i>
+                    </a>
+                    <a href="tel:380678370706" class="phone">
+                        <i class="uil uil-mobile-android"></i> +38 067 83 70 706 <i class="uil uil-arrow-right"></i>
+                    </a>
                 </div>
                 <form action="index.html" class="contact-form">
                     <h3>Send me a message</h3>
@@ -775,7 +779,55 @@
                 </form>
             </div>
         </section>
+
+        <section class="subscription section">
+            <div class="container">
+                <img src="./pictures/map.png" class="map" alt="map">
+                <div class="sub-box">
+                    <img src="./pictures/square2.png" class="shape square">
+                    <div class="sub-info">
+                        <h3 class="sub-heading">Newsletter</h3>
+                        <h1 class="heading">Get news about my projects</h1>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur
+                            consequatur facilis eum, est rem dignissimos?</p>
+                    </div>
+                    <form action="index.html">
+                        <input type="email" placeholder="Email" class="form-input" required>
+                        <input type="submit" class="btn" value="Subcribe">
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <div class="container">
+            <a href="#" class="logo">Portf<span>olio.</span></a>
+            <p class="text">&#169; Copyright 2022. All rights reserved.</p>
+            <ul class="social-media">
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=100017178250928" target="_blank" class="social-link">
+                        <i class="uil uil-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/yurii-len/" target="_blank" class="social-link">
+                        <i class="uil uil-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://t.me/y_olegovich7" target="_blank" class="social-link">
+                        <i class="uil uil-telegram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/y_olegovich7/" target="_blank" class="social-link">
+                        <i class="uil uil-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="./JavaScript/mixitup.min.js"></script>
     <script src="./JavaScript/index.js"></script>

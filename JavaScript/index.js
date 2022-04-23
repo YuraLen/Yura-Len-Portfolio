@@ -10,13 +10,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const prt_section = document.querySelector(".portfolio")
     const zoom_icons = document.querySelectorAll(".zoom-icon")
+    const prt_icon = document.querySelectorAll(".prt-icon")
+    const i_check = document.querySelectorAll(".check")
     const modal_overlay = document.querySelector(".modal-overlay")
     const images = document.querySelectorAll(".images img")
     const prev_btn = document.querySelector(".prev-btn")
     const next_btn = document.querySelector(".next-btn")
 
+    const links = document.querySelectorAll(".nav-link")
 
-    // ------- Sticky Navbar -------
+    const toggle_btn = document.querySelector(".toggle-btn")
+
+    const copyLink1 = document.querySelector("#copyLink1")
+    const copyLink2 = document.querySelector("#copyLink2")
+    const copyLink3 = document.querySelector("#copyLink3")
+    const copyLink4 = document.querySelector("#copyLink4")
+    const copyLink5 = document.querySelector("#copyLink5")
+    const copyLink6 = document.querySelector("#copyLink6")
+
+    console.log(i_check);
+    console.log(toggle_btn);
+
+
+    // ---------- Sticky Navbar ----------
 
     const stickyNavbar = () => {
         header.classList.toggle("scrolled", window.pageYOffset > 0)
@@ -26,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("scroll", stickyNavbar)
 
-    // ------- Receal Animation -------
+    // ---------- Receal Animation ----------
 
     let sr = ScrollReveal({
         duration: 2500,
@@ -39,11 +55,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // sr.reveal("nav", { origin: "top", delay: 700 })
 
 
-    // ------- Skills Animation -------
+    // ---------- Skills Animation ----------
 
     window.addEventListener("scroll", () => {
 
         window.addEventListener("scroll", () => {
+            activeLink()
             if (!skillsPlayed) skillsCounter()
             if (!mlPlayed) mlCounter()
         })
@@ -81,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 setTimeout(() => {
                     updateCounter(counter, target);
-                }, 500)
+                }, 20)
 
             })
 
@@ -90,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         skillsCounter();
 
-        // ------- Services Counter -------
+        // ---------- Services Counter ----------
 
         let mlPlayed = false
 
@@ -101,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 setTimeout(() => {
                     updateCounter(counter, target)
-                }, 400)
+                }, 200)
             })
         }
 
@@ -109,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     })
 
-    // ------- Portfolio Filter -------
+    // ---------- Portfolio Filter ----------
 
     let mixer = mixitup(".portfolio-gallery", {
         selectors: {
@@ -120,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     })
 
-    // ------- Modal Pop up Portfolio -------
+    // ---------- Modal Pop up Portfolio ----------
 
     let currentIndex = 0
 
@@ -130,6 +147,22 @@ document.addEventListener("DOMContentLoaded", () => {
         currentIndex = i;
         changeImage(currentIndex)
     }))
+
+    // prt_icon.forEach((icn, i) => icn.addEventListener("click", () => {
+    //     console.log("icn", icn);
+    //     if (!icn.classList.contains("copied")) { icn.classList.add("copied") }
+
+    //     // function deleteCopiedState(icn) {
+    //     //     if (icn.classList.contains("copied")) { icn.classList.remove("copied") }
+    //     // }
+
+    //     i_check[i].classList.replace("uil-link-h", "uil-check-circle")
+
+    //     setInterval(() => {
+    //         icn.classList.remove("copied")
+    //         i_check[i].classList.replace("uil-check-circle", "uil-link-h")
+    //     }, 1000)
+    // }))
 
     modal_overlay.addEventListener("click", () => {
         prt_section.classList.remove("open");
@@ -159,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
         images[index].classList.add("showImage")
     }
 
-    // ------- Swiper Pagination -------
+    // ---------- Swiper Pagination ----------
 
     const swiper = new Swiper('.swiper', {
         loop: true,
@@ -172,4 +205,70 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     });
 
+    // ---------- Change Active Link On Scroll ----------
+
+    function activeLink() {
+        let sections = document.querySelectorAll("section[id]")
+        let passedSection = Array.from(sections).map((sect, i) => {
+            return {
+                y: sect.getBoundingClientRect().top - header.offsetHeight,
+                id: i,
+            }
+        }).filter(sect => sect.y <= 0)
+
+        let currSectionId = passedSection.at(-1).id
+
+        links.forEach(e => e.classList.remove("active"))
+        links[currSectionId].classList.add("active")
+    }
+
+    activeLink()
+
+    // ---------- Change Theme ----------
+
+    let firstTheme = localStorage.getItem("dark")
+
+    changeTheme(+firstTheme)
+
+    function changeTheme(isDark) {
+        if (isDark) {
+            document.body.classList.add("dark")
+            toggle_btn.classList.replace("uil-moon", "uil-sun")
+            localStorage.setItem("dark", 1)
+        } else {
+            document.body.classList.remove("dark")
+            toggle_btn.classList.replace("uil-sun", "uil-moon")
+            localStorage.setItem("dark", 0)
+        }
+    }
+
+    toggle_btn.addEventListener("click", () => {
+        changeTheme(!document.body.classList.contains("dark"))
+    })
+
+    copyLink1.addEventListener("click", (event) => {
+        event.preventDefault();
+        navigator.clipboard.writeText(copyLink1.href)
+    })
+    copyLink2.addEventListener("click", (event) => {
+        event.preventDefault();
+        navigator.clipboard.writeText(copyLink2.href)
+    })
+    copyLink3.addEventListener("click", (event) => {
+        event.preventDefault();
+        navigator.clipboard.writeText(copyLink3.href)
+    })
+    copyLink4.addEventListener("click", (event) => {
+        event.preventDefault();
+        navigator.clipboard.writeText(copyLink4.href)
+    })
+    copyLink5.addEventListener("click", (event) => {
+        event.preventDefault();
+        navigator.clipboard.writeText(copyLink5.href)
+    })
+    copyLink6.addEventListener("click", (event) => {
+        event.preventDefault();
+        navigator.clipboard.writeText(copyLink6.href)
+    })
 })
+
