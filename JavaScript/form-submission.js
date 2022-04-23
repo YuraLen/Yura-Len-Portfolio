@@ -11,25 +11,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   INPUT.addEventListener('input', updateInput);
 
-  const form = document.getElementById("form")
-  form.addEventListener("submit", formSend)
+  // const form = document.getElementById("form")
+  // form.addEventListener("submit", formSend)
 
-  async function formSend(e) {
-    e.preventDefault()
+  // async function formSend(e) {
+  //   e.preventDefault()
 
-    form.classList.add("_sending")
-    let response = await fetch("sendmail.php", {
-      method: "POST",
-      body: formData
-    })
-    if (response.ok) {
-      let result = await response.json();
-      alert(result.message);
-      formPreview.innerHTML = "";
-      form.reset()
-    } else {
-      alert("Ошибка отправки")
-    }
-  }
+  //   form.classList.add("_sending")
+  //   let response = await fetch("sendmail.php", {
+  //     method: "POST",
+  //     body: formData
+  //   })
+  //   if (response.ok) {
+  //     let result = await response.json();
+  //     alert(result.message);
+  //     formPreview.innerHTML = "";
+  //     form.reset()
+  //   } else {
+  //     alert("Ошибка отправки")
+  //   }
+  // }
 })
 
