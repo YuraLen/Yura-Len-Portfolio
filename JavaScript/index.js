@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const copyLink5 = document.querySelector("#copyLink5")
     const copyLink6 = document.querySelector("#copyLink6")
 
+    const hamburger = document.querySelector(".hamburger")
 
     // ---------- Sticky Navbar ----------
 
@@ -267,5 +268,17 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
         navigator.clipboard.writeText(copyLink6.href)
     })
+
+    // ---------- Open / Close Navbar menu ----------
+
+    hamburger.addEventListener("click", () => {
+        document.body.classList.toggle("open")
+        document.body.classList.toggle("stopScrolling")
+    })
+
+    links.forEach(link => link.addEventListener("click", () => {
+        document.body.classList.remove("open")
+        document.body.classList.remove("stopScrolling")
+    }))
 })
 
