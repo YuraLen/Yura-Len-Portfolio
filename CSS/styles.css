@@ -1610,6 +1610,7 @@ footer .social-media{
 
     .showcase-image{
         min-height: revert;
+        margin: 0 auto;
         height: 100vw;
         height: 500px;
         max-width: 400px;
@@ -1765,6 +1766,13 @@ footer .social-media{
         background-image: linear-gradient(45deg, var(--main-color-2) 17%, var(--main-color-1) 17%);
     }
 
+    .section-background .square{
+        margin-left: 130px;
+        margin-top: 130px;
+        opacity: .6;
+    }
+
+
     .section-background .person, .section-background .circle{
         display: none;
     }
@@ -1839,6 +1847,11 @@ footer .social-media{
     /* ----------------------- Screen Width 768px ----------------------- */
 
     @media (max-width: 500px){
+
+        .showcase-image .circle{
+            display: none;
+        }
+
         .container{
             padding: 0 1rem;
         }
@@ -1914,6 +1927,11 @@ footer .social-media{
             z-index: 1;
             color: #333
         }
+
+        .section-background .square{
+            display: none;
+        }
+    
 
         .contact-form p{
             font-size: 1.2rem;
